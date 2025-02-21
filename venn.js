@@ -97,6 +97,7 @@ export default function () {
       let candidate = Infinity;
       for (const cid in circles) {
         const circle = circles[cid];
+        if (!circle) continue;
         const isInside = set.sets.indexOf(cid) > -1;
         const distToCenter = distance(center, circle);
         let dist;
